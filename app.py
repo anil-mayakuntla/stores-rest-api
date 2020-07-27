@@ -34,6 +34,6 @@ api.add_resource(UserRegister, '/register')
 # the below condition makes sure that the app starts only when we 
 # run app.py and not any imports of app.py in any other module
 if __name__ == "__main__":
-    # from db import db
-    # db.init_app(app)
+    from db import db
+    db.init_app(app)
     app.run(port=5000, debug=True)
